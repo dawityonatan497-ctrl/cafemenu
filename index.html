@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Brew Cafe Menu</title>
+  <meta name="description" content="Modern responsive cafe menu template" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #c1121f;
+      --secondary: #780000;
+      --dark: #1b1b1b;
+      --light: #fff8f0;
+      --white: #ffffff;
+      --gray: #6c757d;
+      --shadow: 0 10px 25px rgba(0,0,0,0.1);
+      --radius: 18px;
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+      url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .hero-content h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .menu-content {
+      padding: 24px;
+    }
+
+    .menu-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .menu-top h3 {
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
+
+    .price {
+      background: var(--primary);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .menu-content p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #ffe5e5;
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+      margin-top: 80px;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h2 {
+      font-size: 2.3rem;
+      color: var(--secondary);
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      margin-top: 90px;
+      background: var(--secondary);
+      color: white;
+      border-radius: var(--radius);
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.7rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .about-text h2 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Urban Brew Cafe</h1>
+      <p>Fresh coffee, delicious meals, and a cozy atmosphere crafted for every coffee lover.</p>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Signature Menu</h2>
+      <p>Carefully selected favorites from our kitchen and coffee bar.</p>
+    </div>
+
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop" alt="Cappuccino">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Cappuccino</h3>
+            <span class="price">$4.50</span>
+          </div>
+          <p>Rich espresso blended with steamed milk and topped with silky foam.</p>
+          <span class="tag">Best Seller</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=1200&auto=format&fit=crop" alt="Latte">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Vanilla Latte</h3>
+            <span class="price">$5.20</span>
+          </div>
+          <p>Espresso with creamy milk and premium vanilla syrup.</p>
+          <span class="tag">Hot Drink</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop" alt="Espresso">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Double Espresso</h3>
+            <span class="price">$3.00</span>
+          </div>
+          <p>Bold and intense espresso shot made from freshly roasted beans.</p>
+          <span class="tag">Strong</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop" alt="Burger">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Classic Burger</h3>
+            <span class="price">$9.90</span>
+          </div>
+          <p>Juicy beef patty, cheddar cheese, fresh lettuce, and house sauce.</p>
+          <span class="tag">Popular</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop" alt="Salad">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Fresh Garden Salad</h3>
+            <span class="price">$7.40</span>
+          </div>
+          <p>Crisp greens, tomatoes, cucumbers, olives, and lemon dressing.</p>
+          <span class="tag">Healthy</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop" alt="Cake">
+        <div class="menu-content">
+          <div class="menu-top">
+            <h3>Chocolate Cake</h3>
+            <span class="price">$4.80</span>
+          </div>
+          <p>Moist layered chocolate cake with rich cocoa frosting.</p>
+          <span class="tag">Dessert</span>
+        </div>
+      </div>
+
+    </div>
+
+    <section class="about">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop" alt="Cafe Interior">
+
+      <div class="about-text">
+        <h2>Why Choose Us?</h2>
+        <p>
+          Urban Brew Cafe combines premium coffee, fresh ingredients, and a modern cozy atmosphere.
+          Whether you're meeting friends, working remotely, or relaxing alone, we provide the perfect space.
+        </p>
+
+        <p>
+          Every cup is brewed with care using selected beans from trusted local and international roasters.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Visit Our Cafe</h2>
+      <p>📍 Bole Road, Addis Ababa, Ethiopia</p>
+      <p>📞 +251 900 000 000</p>
+      <p>🕒 Open Daily: 7:00 AM - 10:00 PM</p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Urban Brew Cafe. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
